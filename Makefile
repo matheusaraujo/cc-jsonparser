@@ -3,7 +3,7 @@ CC = gcc
 CFLAGS = -Wall -g -fprofile-arcs -ftest-coverage
 SRC = src/main.c src/jsonparser.c
 OBJ = $(SRC:.c=.o)
-TEST_SRC = src/test_jsonparser.c
+TEST_SRC = src/jsonparser.test.c
 TEST_OBJ = $(TEST_SRC:.c=.o)
 LIBS = -lcmocka
 CLANG_TIDY = clang-tidy
