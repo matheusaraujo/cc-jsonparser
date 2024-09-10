@@ -4,4 +4,5 @@ RUN apk add --no-cache \
     gcc \
     g++ \
     make \
-    gdb
+    gdb \
+    cmocka-dev

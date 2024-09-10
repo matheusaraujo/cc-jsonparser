@@ -1,7 +1,8 @@
-#include "stdio.h"
+#include <stdio.h>
+#include "jsonparser.h"
 
 int main(void)
 {
-    printf("Hello, World!\n");
+    printf("%s\n", jsonparser());
     return 0;
 }

@@ -6,6 +6,7 @@
 *.dylib
 
 jsonparser
+test
 
 *.gch
 *.dSYM/
