@@ -1,0 +1,24 @@
+name: quality
+
+on: workflow_call
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential clang libcmocka-dev libcunit1-dev clang-tidy
+      - run: make && make lint
+  test:
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential clang libcmocka-dev libcunit1-dev clang-tidy
+      - run: make && make test
+
+
